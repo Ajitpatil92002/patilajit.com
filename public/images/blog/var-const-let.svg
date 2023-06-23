@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 804 452" width="804" height="452">
+  <rect x="0" y="0" width="804" height="452" fill="#F2F2F2"/>
+  <text x="50%" y="15%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="64" fill="#000">JavaScript Variables</text>
+  <circle cx="268" cy="226" r="120" fill="#FFC107" opacity="0.8"/>
+  <text x="238" y="226" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" fill="#333333">var</text>
+  <circle cx="402" cy="226" r="120" fill="#4CAF50"  opacity="0.8"/>
+  <text x="366" y="226" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" fill="#333333">const</text>
+  <circle cx="536" cy="226" r="120" fill="#2196F3"  opacity="0.8"/>
+  <text x="536" y="226" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" fill="#333333">let</text>
+</svg>

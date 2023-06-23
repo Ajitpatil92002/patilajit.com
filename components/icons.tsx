@@ -23,6 +23,12 @@ import {
   Twitter,
   User,
   X,
+  Instagram,
+  Mail,
+  Github,
+  Linkedin,
+  Phone,
+  MenuIcon,
   type Icon as LucideIcon,
 } from "lucide-react";
 
@@ -37,9 +43,9 @@ export const Icons = {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="lucide lucide-lollipop"
     >
       <circle cx="11" cy="11" r="8" />
@@ -53,6 +59,7 @@ export const Icons = {
   trash: Trash,
   post: FileText,
   page: File,
+  MenuIcon: MenuIcon,
   media: Image,
   settings: Settings,
   billing: CreditCard,
@@ -66,6 +73,11 @@ export const Icons = {
   sun: SunMedium,
   moon: Moon,
   laptop: Laptop,
+  Mail,
+  Github,
+  Linkedin,
+  Phone,
+  Instagram,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"

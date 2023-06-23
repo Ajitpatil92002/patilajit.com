@@ -5,6 +5,7 @@ import { useMDXComponent } from "next-contentlayer/hooks"
 import { cn } from "@/lib/utils"
 import { Callout } from "@/components/callout"
 import { MdxCard } from "@/components/mdx-card"
+import Adsense from "./Adsense"
 
 const components = {
   h1: ({ className, ...props }) => (
@@ -149,6 +150,7 @@ const components = {
   ),
   Image,
   Callout,
+  Adsense,
   Card: MdxCard,
 }
 

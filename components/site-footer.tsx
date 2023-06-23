@@ -1,58 +1,66 @@
-import * as React from "react"
+import * as React from "react";
 
-import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
-import { ModeToggle } from "@/components/mode-toggle"
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+import { Icons } from "@/components/icons";
+import { ModeToggle } from "@/components/mode-toggle";
+import Link from "next/link";
 
 export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
-    <footer className={cn(className)}>
-      <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
-        <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-          <Icons.logo />
-          <p className="text-center text-sm leading-loose md:text-left">
-            Built by{" "}
-            <a
-              href={siteConfig.links.twitter}
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              shadcn
-            </a>
-            . Hosted on{" "}
-            <a
-              href="https://vercel.com"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              Vercel
-            </a>
-            . Illustrations by{" "}
-            <a
-              href="https://popsy.co"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              Popsy
-            </a>
-            . The source code is available on{" "}
-            <a
-              href={siteConfig.links.github}
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              GitHub
-            </a>
-            .
-          </p>
+    <>
+      <footer>
+        <div className="container mx-auto mt-5 p-5 pb-20 flex flex-col justify-center items-center text-Lightest-Slate space-y-3">
+          <h4 className="text-lg font-mono">Build By - Ajit Patil</h4>
+          <ul className="w-full flex justify-center gap-6 items-center">
+            <li className="cursor-pointer hover:text-Green opacity-80">
+              <Link href="mailto:patilajit020@gmail.com" target="_blank">
+                <Icons.Mail size={25} className="m-auto " fontWeight={300} />
+              </Link>
+            </li>
+            <li className="cursor-pointer hover:text-Green opacity-80">
+              <Link
+                title="Instagram"
+                href="https://www.instagram.com/ajit__patil___/"
+                target="_blank"
+              >
+                <Icons.Instagram
+                  size={25}
+                  className="m-auto "
+                  fontWeight={300}
+                />
+              </Link>
+            </li>
+            <li className="cursor-pointer hover:text-Green opacity-80">
+              <Link
+                href="https://github.com/Ajitpatil92002"
+                title="Instagram"
+                target="_blank"
+              >
+                <Icons.Github size={25} className="m-auto " fontWeight={300} />
+              </Link>
+            </li>
+            <li className="cursor-pointer hover:text-Green opacity-80">
+              <Link
+                href="https://www.linkedin.com/in/ajit-patil-9b600023b/"
+                target="_blank"
+                title="Instagram"
+              >
+                <Icons.Linkedin
+                  size={25}
+                  className="m-auto "
+                  fontWeight={300}
+                />
+              </Link>
+            </li>
+            <li className="cursor-pointer hover:text-Green opacity-80">
+              <Link href="tel:8971860300" title="Instagram" target="_blank">
+                <Icons.Phone size={25} className="m-auto " fontWeight={300} />
+              </Link>
+            </li>
+          </ul>
         </div>
-        <ModeToggle />
-      </div>
-    </footer>
-  )
+      </footer>
+    </>
+  );
 }

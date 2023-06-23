@@ -40,7 +40,7 @@ export async function generateMetadata({
 
   const url = process.env.NEXT_PUBLIC_APP_URL;
 
-  const ogUrl = new URL(`${url}/api/og`);
+  const ogUrl = new URL(`${url}/${post.image}`);
   ogUrl.searchParams.set("heading", post.title);
   ogUrl.searchParams.set("type", "Blog Post");
   ogUrl.searchParams.set("mode", "dark");
@@ -123,7 +123,7 @@ export default async function PostPage({ params }: PostPageProps) {
               author ? (
                 <Link
                   key={author._id}
-                  href={`https://twitter.com/${author.twitter}`}
+                  href={`https://www.linkedin.com/in/ajit-patil-9b600023b/`}
                   className="flex items-center space-x-2 text-sm"
                 >
                   <Image
@@ -136,7 +136,7 @@ export default async function PostPage({ params }: PostPageProps) {
                   <div className="flex-1 text-left leading-tight">
                     <p className="font-medium">{author.title}</p>
                     <p className="text-[12px] text-muted-foreground">
-                      @{author.twitter}
+                      @{author.socialLinks}
                     </p>
                   </div>
                 </Link>

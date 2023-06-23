@@ -7,6 +7,7 @@ import { MainNav } from "@/components/main-nav";
 import { marketingConfig } from "@/config/marketing";
 import { SiteFooter } from "@/components/site-footer";
 import { ModeToggle } from "@/components/mode-toggle";
+import Script from "next/script";
 
 export const metadata = {
   title: "Create Next App",
@@ -29,9 +30,18 @@ export default function RootLayout({ children }: RootLayoutProps) {
           poppins.style
         )}
       >
+        <Script
+          id="adsbygoogle-init"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2063750069748249"
+        />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="main">
+            <div className="gradient" />
+          </div>
           <div className="flex min-h-screen flex-col">
-            <header className="container z-40 bg-background">
+            <header className="container z-40 ">
               <div className="flex h-20 items-center justify-between py-6">
                 <MainNav items={marketingConfig.mainNav} />
                 <nav>
