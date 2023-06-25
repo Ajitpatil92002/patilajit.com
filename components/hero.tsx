@@ -8,26 +8,26 @@ const Hero = () => {
   return (
     <>
       <section id="hero">
-        <div className="conatiner md:mx-auto mt-12 md:mt-16 flex flex-col md:text-center mx-10 space-y-6 sm:space-y-8 md:space-y-10 sm:items-center">
+        <div className="conatiner mx-10 mt-12 flex flex-col space-y-6 sm:items-center sm:space-y-8 md:mx-auto md:mt-16 md:space-y-10 md:text-center">
           <div className="font-mono md:text-2xl">
             <span>
               Hi<span className="wave">👋🏻</span>, my name is
             </span>
           </div>
           <div>
-            <h1 className="text-4xl md:text-7xl font-mono font-extrabold tracking-in-expand-fwd ">
+            <h1 className="tracking-in-expand-fwd font-mono text-4xl font-extrabold md:text-7xl ">
               Ajit Rajesh Patil.
             </h1>
           </div>
           <div>
-            <p className="text-2xl md:text-6xl font-mono font-bold tracking-in-expand-fwd">
+            <p className="tracking-in-expand-fwd font-mono text-2xl font-bold md:text-6xl">
               Web Developer.
             </p>
-            <p className="text-2xl md:text-6xl font-mono font-bold tracking-in-expand-fwd">
+            <p className="tracking-in-expand-fwd font-mono text-2xl font-bold md:text-6xl">
               Freelancer.
             </p>
           </div>
-          <div className="font-mono tracking-wide sm:text-center max-w-md md:text-xl">
+          <div className="max-w-md font-mono tracking-wide sm:text-center md:text-xl">
             <h2>
               <b>Passionate</b> about Work,<b>Self-reliant</b>
               <br />

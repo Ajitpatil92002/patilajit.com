@@ -40,7 +40,7 @@ export async function generateMetadata({
 
   const url = process.env.NEXT_PUBLIC_APP_URL;
 
-  const ogUrl = new URL(`${url}/${post.image}`);
+  const ogUrl = new URL(`${url}${post.image}`);
   ogUrl.searchParams.set("heading", post.title);
   ogUrl.searchParams.set("type", "Blog Post");
   ogUrl.searchParams.set("mode", "dark");
@@ -114,7 +114,7 @@ export default async function PostPage({ params }: PostPageProps) {
             Published on {formatDate(post.date)}
           </time>
         )}
-        <h1 className="mt-2 inline-block font-heading text-4xl leading-tight lg:text-5xl">
+        <h1 className="font-heading mt-2 inline-block text-4xl leading-tight lg:text-5xl">
           {post.title}
         </h1>
         {authors?.length ? (

@@ -19,13 +19,13 @@ export default async function Home() {
             Some Things I’ve Built
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-prj  md:p-14 mt-10 ">
+        <div className="mt-10 grid grid-cols-1 gap-3  md:grid-cols-prj md:p-14 ">
           {siteConfig.projects.map((prj, i) => {
             return (
               <>
-                <div className="flex flex-col h-full w-full bg-popover rounded-md shadow-md opacity-90  mb-[35px] pt-[2rem] px-[1.5rem]  ease-out duration-200">
-                  <div className="flex justify-between items-center">
-                    <div className="text-Green p-3 cursor-pointer">
+                <div className="mb-[35px] flex h-full w-full flex-col rounded-md bg-popover px-[1.5rem]  pt-[2rem] opacity-90 shadow-md  duration-200 ease-out">
+                  <div className="flex items-center justify-between">
+                    <div className="text-Green cursor-pointer p-3">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         role="img"
@@ -35,7 +35,7 @@ export default async function Home() {
                         strokeWidth="1"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="w-[40px] h-[40px]"
+                        className="h-[40px] w-[40px]"
                       >
                         <title>Folder</title>
                         <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
@@ -53,7 +53,7 @@ export default async function Home() {
                             strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            className="w-[20px] h-[20px] hover:text-Green cursor-pointer"
+                            className="hover:text-Green h-[20px] w-[20px] cursor-pointer"
                           >
                             <title>GitHub</title>
                             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -71,7 +71,7 @@ export default async function Home() {
                             strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            className="w-[20px] h-[20px] hover:text-Green cursor-pointer"
+                            className="hover:text-Green h-[20px] w-[20px] cursor-pointer"
                           >
                             <title>External Link</title>
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -84,19 +84,19 @@ export default async function Home() {
                   </div>
                   <div
                     id="prj1"
-                    className="flex flex-col justify-between text-left  mt-3"
+                    className="mt-3 flex flex-col justify-between  text-left"
                   >
-                    <span className="flex text-3xl font-mono font-extrabold tracking-normal mb-4 hover:text-Green">
+                    <span className="hover:text-Green mb-4 flex font-mono text-3xl font-extrabold tracking-normal">
                       {prj.Title}
                     </span>
-                    <p className="opacity-90  mt-2">{prj.Body}</p>
+                    <p className="mt-2  opacity-90">{prj.Body}</p>
                     {prj.Category && (
                       <div className="space-x-1 space-y-1 py-4">
                         <span></span>
                         {prj.Category.map((category, i) => (
                           <span
                             key={i}
-                            className="opacity-90 inline-block py-1 px-1 rounded   text-xs font-medium tracking-widest"
+                            className="inline-block rounded p-1 text-xs   font-medium tracking-widest opacity-90"
                           >
                             {category}
                           </span>

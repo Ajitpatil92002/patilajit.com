@@ -3,9 +3,9 @@ import { SiteConfig } from "types";
 export const siteConfig: SiteConfig = {
   name: "Ajit Patil",
   description:
-    "An open source application built using the new router, server components and everything new in Next.js 13.",
+    "Ajit Rajesh Patil is Web Developer from Bidar , Karnataka. Who specialized in building WebSites and Web Apps. currently a third year student at GURU NANAK DEV ENGINEERING COLLEGE KARNATAKA BIDAR pursuing a degree in Computer science",
   url: "https://patilajit.com",
-  ogImage: "https://tx.shadcn.com/og.PNG",
+  ogImage: "https://patilajit.com/og.png",
   links: {
     github: "https://github.com/Ajitpatil92002",
   },
@@ -68,6 +68,13 @@ export const siteConfig: SiteConfig = {
       ],
       GithubLink: "https://github.com/Ajitpatil92002/Blog-Minia",
       webLink: "https://blogminia.onrender.com",
+    },
+    {
+      Title: "Pizza Store App",
+      Body: "Dynamic single web page for a local pizza store using React Framework. Fetching pizza data from an API and display pizzas with customizable options, sorting, and a cart feature with Redux.",
+      Category: ["React.JS", "Tailwind Css", "Redux"],
+      GithubLink: "https://github.com/Ajitpatil92002/pizza-store",
+      webLink: "https://pizza-store-23u0.onrender.com/",
     },
     {
       Title: "Todo App",
