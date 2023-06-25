@@ -10,7 +10,6 @@ import { ModeToggle } from "@/components/mode-toggle";
 import Script from "next/script";
 import { siteConfig } from "@/config/site";
 
-
 export const metadata = {
   title: {
     default: siteConfig.name,
@@ -18,7 +17,23 @@ export const metadata = {
   },
   description: siteConfig.description,
   keywords: [
-    "patilajit" ,"patilajit","ajitpatil","ajitrajeshpatil","ajitpatilbidar","webdeveloper","bidarwebdeveloper","patilajitwebdeveloper","webdevelopment","website","webapps","bidar","Karnataka","JavaScript","JavaScripProjects","nextjsProjects","NextJS"
+    "patilajit",
+    "patilajit",
+    "ajitpatil",
+    "ajitrajeshpatil",
+    "ajitpatilbidar",
+    "webdeveloper",
+    "bidarwebdeveloper",
+    "patilajitwebdeveloper",
+    "webdevelopment",
+    "website",
+    "webapps",
+    "bidar",
+    "Karnataka",
+    "JavaScript",
+    "JavaScripProjects",
+    "nextjsProjects",
+    "NextJS",
   ],
   authors: [
     {
@@ -45,7 +60,7 @@ export const metadata = {
         height: 630,
         alt: "patilajit.com",
       },
-    ]
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -60,7 +75,7 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: `${siteConfig.url}/site.webmanifest`,
-}
+};
 
 const poppins = Poppins({ weight: "600", subsets: ["devanagari"] });
 
@@ -79,10 +94,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
         )}
       >
         <Script
-          id="adsbygoogle-init"
-          strategy="afterInteractive"
-          crossOrigin="anonymous"
+          async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2063750069748249"
+          crossOrigin="anonymous"
+          strategy="lazyOnload"
         />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="main">
