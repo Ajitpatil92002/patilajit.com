@@ -35,7 +35,7 @@ export default async function BlogPage() {
           {posts.map((post, index) => (
             <>
               <article
-                key={post._id}
+                key={post.slug}
                 className="group relative flex flex-col space-y-2"
               >
                 {post.image && (

@@ -4,8 +4,8 @@ export const siteConfig: SiteConfig = {
   name: "Ajit Patil",
   description:
     "Ajit Rajesh Patil is Web Developer from Bidar , Karnataka. Who specialized in building WebSites and Web Apps. currently a third year student at GURU NANAK DEV ENGINEERING COLLEGE KARNATAKA BIDAR pursuing a degree in Computer science",
-  url: "https://patilajit.com",
-  ogImage: "https://patilajit.com/og.png",
+  url: "https://www.patilajit.com",
+  ogImage: "https://www.patilajit.com/og.png",
   links: {
     github: "https://github.com/Ajitpatil92002",
   },
@@ -37,7 +37,7 @@ export const siteConfig: SiteConfig = {
       Body: "My Personal website to wrap all my works and Freelance Protfolio and Blog, Tech Stack used NextJS with React components , Node JS , Express JS , MonogoDB .Learned lot of things in this project from Development to Deployment",
       Category: ["NextJS", "React.JS", "Tailwind Css", "Contentlayer"],
       GithubLink: "https://github.com/Ajitpatil92002/patilajit.com",
-      webLink: "https://patilajit.com",
+      webLink: "https://www.patilajit.com",
     },
     {
       Title: "Vandane Mobile Application",

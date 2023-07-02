@@ -23,7 +23,7 @@ export default async function Home() {
           {siteConfig.projects.map((prj, i) => {
             return (
               <>
-                <div className="mb-[35px] flex h-full w-full flex-col rounded-md bg-popover px-[1.5rem]  pt-[2rem] opacity-90 shadow-md  duration-200 ease-out">
+                <div key={prj.Title} className="mb-[35px] flex h-full w-full flex-col rounded-md bg-popover px-[1.5rem]  pt-[2rem] opacity-90 shadow-md  duration-200 ease-out">
                   <div className="flex items-center justify-between">
                     <div className="text-Green cursor-pointer p-3">
                       <svg

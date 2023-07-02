@@ -97,8 +97,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2063750069748249"
           crossOrigin="anonymous"
-          strategy="lazyOnload"
-        />
+        ></Script>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="main">
             <div className="gradient" />
