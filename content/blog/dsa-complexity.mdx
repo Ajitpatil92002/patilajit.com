@@ -1,0 +1,248 @@
+---
+title: Dsa - Time Complexity and Space Complexity
+description: Learn and prepare for interview Time Complexity and Space Complexity
+image: "/images/blog/dsa-complexity.svg"
+date: "2024-08-25"
+authors:
+  - AjitPatil
+---
+
+# Dsa - Time Complexity and Space Complexity
+
+Time Complexity : The amount of time the code take to execute and give output and it depends on the input size.
+
+The Main Goal is to write a efficient code.
+
+- we denote it by Big O notation
+
+There are different notations
+
+Big O - for worst case scenario, providing an upper bond of algorithm
+Omega (Ω) - for best case scenario, providing an lower bond of algorithm
+Theta (θ) Represents the average complexity of an algorithm of algorithm.
+
+## How to Analyse Complexity of Algorithms
+
+To analyse complexity of algorithm is to find number of operations involved in the algorithm
+
+- Constant Time Complexity O(1):
+
+The time complexity of a algorithm is consider as O(1) if it doesn’t contain a loop, recursion, and call to any other non-constant time function.
+
+O(1) refers to constant time complexity.
+
+```javascript
+function some(num) {
+  return (num * 5 - 4) / 3; // only one operation
+}
+```
+
+- Linear Time Complexity O(n):
+
+Linear time complexity, denoted as O(n), is a measure of the growth of the running time of an algorithm proportional to the size of the input.
+
+```javascript
+function find(arr, n) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == n) {
+      return i;
+    }
+  }
+  return null;
+}
+
+consle.log(find([23, 1, 55, 3, 6]));
+```
+
+- Quadratic Time Complexity O(n^2)
+
+Quadratic time complexity, denoted as O(n^2), refers to an algorithm whose running time increases proportional to the square of the size of the input.
+
+```javascript
+function printAllPairs(arr) {
+  // Outer loop runs n times
+  for (let i = 0; i < arr.length; i++) {
+    // Inner loop also runs n times for each iteration of the outer loop
+    for (let j = 0; j < arr.length; j++) {
+      console.log(`Pair: (${arr[i]}, ${arr[j]})`);
+    }
+  }
+}
+
+const myArray = [1, 2, 3, 4];
+printAllPairs(myArray);
+```
+
+- Logarithmic Time Complexity O(Log n):
+
+What is a Logarithm?
+The power to which a base needs to be raised to reach a given number is called the logarithm of that number for the respective base.
+
+```javascript
+function isPowerOfFour(N) {
+  // Check if N is greater than zero
+  if (N <= 0) {
+    return 0;
+  }
+
+  // Keep dividing N by 4 while it's divisible by 4
+  while (N % 4 === 0) {
+    N /= 4;
+  }
+
+  // If N has been reduced to 1, then it's a power of 4
+  return N === 1 ? 1 : 0;
+}
+console.log(isPowerOfFour(16)); // Output: 1 (16 is 4^2)
+console.log(isPowerOfFour(5)); // Output: 0 (5 is not a power of 4)
+console.log(isPowerOfFour(64)); // Output: 1 (64 is 4^3)
+```
+
+```javascript
+function sqrt(x) {
+  if (x < 2) return x;
+
+  let left = 1,
+    right = x,
+    result = 1;
+
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+    if (mid * mid <= x) {
+      result = mid;
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return result;
+}
+```
+
+# Calculating Time Complexity in Big O Notation
+
+Calculating the time complexity of an algorithm in Big O notation involves analyzing the code to understand how the running time increases as the input size (usually denoted as \( n \)) grows. Here’s a step-by-step guide to calculating the time complexity:
+
+## 1. Identify the Basic Operations
+
+- Identify the most basic operation(s) that are being repeated in your algorithm, such as comparisons, assignments, arithmetic operations, etc.
+- These operations are typically found within loops or recursive calls, as they determine the overall time complexity.
+
+## 2. Analyze Loops
+
+- **Single Loop:** If an algorithm contains a single loop that runs \( n \) times, the time complexity is \( O(n) \).
+
+  ```javascript
+  for (let i = 0; i < n; i++) {
+    // Basic operation
+  }
+  ```
+
+  **Time Complexity:** \( O(n) \)
+
+- **Nested Loops:** If there are nested loops, multiply their complexities.
+
+  ```javascript
+  for (let i = 0; i < n; i++) {
+    // Outer loop: O(n)
+    for (let j = 0; j < n; j++) {
+      // Inner loop: O(n)
+      // Basic operation
+    }
+  }
+  ```
+
+  **Time Complexity:** \( O(n) \times O(n) = O(n^2) \)
+
+- **Multiple Loops:** If loops are sequential (one after the other), add their complexities.
+  ```javascript
+  for (let i = 0; i < n; i++) {
+    // First loop: O(n)
+    // Basic operation
+  }
+  for (let j = 0; j < n; j++) {
+    // Second loop: O(n)
+    // Basic operation
+  }
+  ```
+  **Time Complexity:** \( O(n) + O(n) = O(n) \)
+
+## 3. Analyze Recursive Calls
+
+- Analyze the number of times the recursive function calls itself and how the problem size reduces with each call.
+- **Example (Binary Search):**
+  ```javascript
+  function binarySearch(arr, left, right, target) {
+    if (left <= right) {
+      let mid = Math.floor((left + right) / 2);
+      if (arr[mid] === target) return mid;
+      if (arr[mid] > target) return binarySearch(arr, left, mid - 1, target);
+      return binarySearch(arr, mid + 1, right, target);
+    }
+    return -1;
+  }
+  ```
+  **Time Complexity:** Since each call halves the input size, the time complexity is \( O(\log n) \).
+
+## 4. Consider Any Conditional Statements
+
+- If your algorithm contains conditional statements, determine which branch has the highest time complexity and use that for the overall complexity.
+- **Example:**
+  ```javascript
+  if (condition) {
+    // O(n) operation
+  } else {
+    // O(log n) operation
+  }
+  ```
+  **Time Complexity:** \( O(n) \) (since it dominates \( O(\log n) \)).
+
+## 5. Drop Constants and Lower Order Terms
+
+- Big O notation focuses on the growth rate as \( n \) becomes large. Therefore, drop any constant factors and lower-order terms.
+- **Example:**
+  ```javascript
+  T(n) = 3n^2 + 5n + 10
+  ```
+  - Here, \( 3n^2 \) dominates as \( n \) grows, so the time complexity is \( O(n^2) \).
+
+## 6. Consider Worst-Case Scenario
+
+- Big O notation typically represents the worst-case scenario, so always consider the scenario where the algorithm takes the most time.
+
+## 7. Use Common Big O Classifications
+
+- Familiarize yourself with common Big O classifications, such as:
+  - **\( O(1) \)**: Constant time (independent of input size)
+  - **\( O(\log n) \)**: Logarithmic time
+  - **\( O(n) \)**: Linear time
+  - **\( O(n \log n) \)**: Linearithmic time
+  - **\( O(n^2) \)**: Quadratic time
+  - **\( O(2^n) \)**: Exponential time
+  - **\( O(n!) \)**: Factorial time
+
+## Example of Time Complexity Calculation
+
+```javascript
+function exampleFunction(arr) {
+  let n = arr.length;
+
+  // O(1) operation
+  let sum = 0;
+
+  // O(n) loop
+  for (let i = 0; i < n; i++) {
+    sum += arr[i]; // Basic operation: O(1)
+  }
+
+  // Nested loop: O(n^2)
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      console.log(arr[i] + arr[j]); // Basic operation: O(1)
+    }
+  }
+
+  return sum;
+}
+```

@@ -19,7 +19,7 @@ export default async function Home() {
             Some Things I’ve Built
           </p>
         </div>
-        <div className="mt-10 grid grid-cols-1 gap-3  md:grid-cols-prj md:p-14 ">
+        <div className="mt-10 grid grid-cols-1 gap-3  md:grid-cols-3 md:p-14 ">
           {siteConfig.projects.map((prj, i) => {
             return (
               <>

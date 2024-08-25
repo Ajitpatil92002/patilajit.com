@@ -44,16 +44,10 @@ export function MainNav({ items, children }: MainNavProps) {
               {item.title}
             </Link>
           ))}
-          
+
         </nav>
       ) : null}
-      <button
-        
-        onClick={() => setShowMobileMenu(!showMobileMenu)}
-      >
-        {showMobileMenu ? <Icons.close /> : <Icons.MenuIcon/>}
-        {/* <span className="font-bold">Menu</span> */}
-      </button>
+
       {showMobileMenu && items && (
         <MobileNav items={items}>{children}</MobileNav>
       )}

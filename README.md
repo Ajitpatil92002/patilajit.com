@@ -2,7 +2,6 @@
 
 An application built using the new router, server components and everything new in Next.js 13.
 
-
 ## About this project
 
 This project as an experiment to see how a modern app (static pages for blog ...etc) would work in Next.js 13 and server components.

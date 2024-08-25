@@ -9,6 +9,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { ModeToggle } from "@/components/mode-toggle";
 import Script from "next/script";
 import { siteConfig } from "@/config/site";
+import { SiteHeader } from "@/components/site-header";
 
 export const metadata = {
   title: {
@@ -103,14 +104,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <div className="gradient" />
           </div>
           <div className="flex min-h-screen flex-col">
-            <header className="container z-40 ">
+            {/* <header className="container z-40 ">
               <div className="flex h-20 items-center justify-between py-6">
                 <MainNav items={marketingConfig.mainNav} />
                 <nav>
                   <ModeToggle />
                 </nav>
               </div>
-            </header>
+            </header> */}
+            <SiteHeader />
             <main className="flex-1">{children}</main>
             <SiteFooter />
           </div>

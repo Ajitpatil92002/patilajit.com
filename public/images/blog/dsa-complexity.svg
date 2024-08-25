@@ -1,0 +1,78 @@
+<svg
+    width="600"
+    height="315"
+    viewBox="0 0 600 315"
+    xmlns="http://www.w3.org/2000/svg"
+    style="background-color: #f8f9fa;"
+>
+    <rect width="600" height="315" fill="#ffffff" rx="15" />
+  
+    <g transform="translate(50, 100)">
+        <rect x="0" y="50" width="40" height="60" fill="#ff6384" />
+        <rect x="100" y="30" width="40" height="80" fill="#36a2eb" />
+        <rect x="200" y="10" width="40" height="100" fill="#4bc0c0" />
+        <rect x="300" y="20" width="40" height="90" fill="#ffce56" />
+        <rect x="400" y="40" width="40" height="70" fill="#9966ff" />
+        
+        <text
+            x="-30"
+            y="15"
+            font-size="14"
+            font-family="Arial, sans-serif"
+            fill="#333"
+        >
+            Time Complexity
+        </text>
+        
+        <text
+            x="10"
+            y="120"
+            font-size="12"
+            font-family="Arial, sans-serif"
+            fill="#333"
+            text-anchor="middle"
+        >
+            O(1)
+        </text>
+        <text
+            x="110"
+            y="125"
+            font-size="12"
+            font-family="Arial, sans-serif"
+            fill="#333"
+            text-anchor="middle"
+        >
+            O(log n)
+        </text>
+        <text
+            x="210"
+            y="130"
+            font-size="12"
+            font-family="Arial, sans-serif"
+            fill="#333"
+            text-anchor="middle"
+        >
+            O(n)
+        </text>
+        <text
+            x="310"
+            y="135"
+            font-size="12"
+            font-family="Arial, sans-serif"
+            fill="#333"
+            text-anchor="middle"
+        >
+            O(n log n)
+        </text>
+        <text
+            x="420"
+            y="145"
+            font-size="12"
+            font-family="Arial, sans-serif"
+            fill="#333"
+            text-anchor="middle"
+        >
+            O(n^2)
+        </text>
+    </g>
+</svg>
